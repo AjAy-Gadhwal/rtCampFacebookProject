@@ -106,10 +106,10 @@
                 <img class="zipingImg" src="<?php echo base_url('assets/images/ziping.gif'); ?>" alt="">
                 <img class="zipingImgUpload" src="<?php echo base_url('assets/images/zipUpload.gif'); ?>" alt="">
             </div>
-            <!-- <div class="modelFooter">
+            <div class="modelFooter">
                 <a href="" class="modelBtn downloadZip" disabled >Download</a>
-                <button class="modelBtn" disabled >Close</button>
-            </div> -->
+                <button class="modelBtn closeDownload" disabled >Close</button>
+            </div>
         </div>
     </div>
 

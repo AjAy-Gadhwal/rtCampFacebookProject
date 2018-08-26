@@ -50,9 +50,9 @@ $(document).ready(function(){
             url: dataUrl,
             type: "GET",
             success: function(downloadUrl) {
-                window.location = "../"+downloadUrl;
-                $(".modelDiv").animate({"height":"0"}, 1000).hide();
-                $("body").css({"overflow":"auto"});
+                // window.location = "../"+downloadUrl;
+                $(".modelDiv .modelFooter > .modelBtn").attr("disabled", false);
+                $(".modelDiv .modelFooter > .downloadZip").prop("href", "../"+downloadUrl);                
             }
         });    
     });
@@ -89,6 +89,11 @@ $(document).ready(function(){
         // $(".imageModal").css({"opacity": '1'});     
         // $(".imageModal").animate({height: $(".imageModal > center > img").height}, 1000 );
         $(".imageModal > center > img").attr("src", imgUrl);
+    });
+
+    $(".modelDiv .modelFooter").on("click", ".modelBtn", function(){
+        $(".modelDiv").animate({"height":"0"}, 1000).hide();
+        $("body").css({"overflow":"auto"});
     });
 
 });

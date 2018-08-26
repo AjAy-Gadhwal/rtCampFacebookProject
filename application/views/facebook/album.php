@@ -22,20 +22,10 @@
         </div>
 
         <div class="menu">
-            <ul>
+            <ul>                
                 <li>   
-                    <a href="javascript:;" title="Download Selected Albums">
-                        <i class="fa fa-download downloadSelectedAlbum" aria-hidden="true" ></i>                                 
-                    </a>                 
-                </li>
-                <li>   
-                    <a href="#" title="Download Selected Albums">
-                        <i class="fa fa-download downloadSelectedAlbum" aria-hidden="true"> </i>                                 
-                    </a>                 
-                </li>
-                <li>   
-                    <a href="#" title="Download Selected Albums">
-                        <i class="fa fa-download downloadSelectedAlbum" aria-hidden="true"> </i>                                 
+                    <a href="./albums" title="Albums">
+                        <i class="fa fa-file-image-o" aria-hidden="true"> ALBUMS </i>                                 
                     </a>                 
                 </li>
                 <li>
