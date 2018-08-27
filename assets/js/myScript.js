@@ -1,3 +1,4 @@
+/** global: baseUrl */
 $(document).ready(function(){
        
     var container = $('.container').offset().top;
