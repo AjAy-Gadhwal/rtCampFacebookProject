@@ -61,8 +61,8 @@
                 ALBUMS
             </div>
             <div class="gridContainer">
-                <?php foreach($albums["albums"]["data"] as $album) { ?> 
-                    <?php if($album["count"] != 0) { ?>  
+                <?php foreach ($albums["albums"]["data"] as $album) { ?> 
+                    <?php if ($album["count"] != 0) { ?>  
                         <div class="gridItem">
                             <div class="image" style="background-image: url('<?php print_r($album["picture"]["data"]["url"]); ?>')" >                                       
                             </div>  
