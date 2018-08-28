@@ -1,10 +1,10 @@
-/** global: baseUrl */
 $(document).ready(function(){
        
     var container = $('.container').offset().top;
     var headerProfile = true;
     
     $(window).scroll(function() { //when window is scrolled
+        console.log($(".profileImageLeft").css("left"));
         if(container > (container - $(window).scrollTop()))
         {
             if(headerProfile) {
@@ -13,18 +13,18 @@ $(document).ready(function(){
                 $(".header").css({"background-color":"rgba(0, 0, 0, 0.7)"});
                 $(".header > .menu > ul > li").css({"background-color":"rgba(0, 0, 0, 0.7)"});
                 setTimeout(function(){ 
-                    $(".profile > .profileImage").css({"top":"0vw"}).find("img").css({"width":"8vw","height":"8vw"});
+                    $(".profile > .profileImage").css({"top":"0vw"}).find("img").css({"width": $(".profileImageLeft").css("width"),"height": $(".profileImageLeft").css("width")});
                 }, 1000); 
                 headerProfile = false;
             }
         } else {
             if(!headerProfile) {
-                $(".profile > .profileImage").css({"top":"15vh"}).find("img").css({"width":"14vw","height":"14vw"});            
+                $(".profile > .profileImage").css({"top":"15vh"}).find("img").css({"width":"14em","height":"14em"});            
                 $(".profile > .profileName").css({"padding":".625rem 0rem"});
                 $(".header").css({"background-color":"rgba(0, 0, 0, 0.3)"});
                 $(".header > .menu > ul > li").css({"background-color":"rgba(0, 0, 0, 0.3)"});
                 setTimeout(function(){                 
-                    $(".profile > .profileImage").css({"left":"38vw"}).find("img");
+                    $(".profile > .profileImage").css({"left": $(".profileImageLeft").css("left") }).find("img");
                 }, 1000); 
                 headerProfile = true;
             }

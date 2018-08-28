@@ -61,8 +61,8 @@
                 ALBUMS
             </div>
             <div class="gridContainer">
-                <?php foreach ($albums["albums"]["data"] as $album) { ?> 
-                    <?php if ($album["count"] != 0) { ?>  
+                <?php foreach($albums["albums"]["data"] as $album) { ?> 
+                    <?php if($album["count"] != 0) { ?>  
                         <div class="gridItem">
                             <div class="image" style="background-image: url('<?php print_r($album["picture"]["data"]["url"]); ?>')" >                                       
                             </div>  
@@ -113,7 +113,7 @@
         </div>
     </div>
 
-    <div id="googleAuth" >
+    <div id="googleAuth" class="profileImageLeft" >
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="

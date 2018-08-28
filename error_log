@@ -1,0 +1,1 @@
+[23-Aug-2018 08:59:22 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/o96prx4jyied/public_html/rtcampajay/system/libraries/Session/drivers/Session_files_driver.php on line 212

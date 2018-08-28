@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /robots.txt
+Sitemap: https://rtcampajay.apsismanagement.com/sitemap.xml

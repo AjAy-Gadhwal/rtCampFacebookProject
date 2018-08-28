@@ -7,13 +7,14 @@ class FacebookApi extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->library('zip');
-		$this->load->model("FacebbokApiModel", "api");
+        $this->load->model("FacebbokApiModel", "api");
+        $this->load->library('unit_test');
 	}
 
 	public function index()
 	{
 		$this->load->view('facebook/login');
-	}
+    }
 
 	public function albums()
 	{
@@ -21,16 +22,27 @@ class FacebookApi extends CI_Controller {
 		$_SESSION["userId"] = $data["albums"]["id"];
 		$_SESSION["name"] = $data["albums"]["name"];
 		$_SESSION["picture"] = $data["albums"]["picture"]["data"]["url"];
-		// echo "<pre>";
-		// print_r($data["albums"]);				
+				
 		$this->load->view('facebook/albums', $data);
-	}
+    }
+    
+    public function testAlbums() {
+        $data['albums'] = $this->api->getFacebookData('/me?fields=id,name,birthday,gender,age_range,picture.height(500).width(500),albums{count,name,picture}');
+		
+		$test = 1;
+        $testName = 'Get Facebook Data Using Api : /me?fields=id,name,birthday,gender,age_range,picture.height(500).width(500),albums{count,name,picture}';
+		$notes = 'No Data Found / You Are Not Login.';
+
+		if(count($data['albums']) <= 1) 
+		{
+			$test = 0;
+		}
+        echo $this->unit->run($test, 1, $testName, $notes);
+    }
 
 	public function album()
 	{
-		$data['album'] = $this->api->getFacebookData("/{$_GET['albumId']}/photos?fields=source");
-		// echo "<pre>";
-		// print_r($data["album"]);			
+		$data['album'] = $this->api->getFacebookData("/{$_GET['albumId']}/photos?fields=source");		
 		$this->load->view('facebook/album', $data);
 	}
 
