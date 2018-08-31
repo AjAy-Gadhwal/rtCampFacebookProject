@@ -14,6 +14,7 @@
 
 ### 4. Coding Standard
 - ###### I Have Test PHP Code Sniffer and JSHint on Github And fot that i use scrutinizer-ci.
+- [My Scrutinizer Result](https://scrutinizer-ci.com/g/AjAy-Gadhwal/rtCampFacebookProject/inspections/5fe2146f-7299-4eb4-b836-4285359570c0)
 - ![alt text](https://github.com/AjAy-Gadhwal/rtCampFacebookProject/blob/master/assets/images/scrutinizer.png)
 
 ### 5. Unit Testing
