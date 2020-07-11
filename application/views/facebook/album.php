@@ -45,7 +45,7 @@
             <?php echo $_GET['albumName']; ?> ALBUM
         </div>
         <div class="gridContainer">
-            <?php foreach($album["data"] as $img) { ?>                
+            <?php foreach ($album["data"] as $img) { ?>                
                 <div class="gridItem">
                     <div class="image" style="background-image: url('<?php print_r($img["source"]); ?>'); border-radius: 0.5rem;" >                                       
                     </div>                               
